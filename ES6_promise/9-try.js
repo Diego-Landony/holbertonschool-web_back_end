@@ -1,18 +1,12 @@
-// Queue push
-function guardrail(mathFunction) {
+export default function guardrail(mathFunction) {
   const queue = [];
-  let result;
-
+  let value;
   try {
-    result = mathFunction();
-  } catch (e) {
-    result = e.toString();
+    value = mathFunction();
+  } catch (error) {
+    value = error.toString();
   }
-
-  queue.push(result);
+  queue.push(value);
   queue.push('Guardrail was processed');
-
   return queue;
 }
-
-export default guardrail;

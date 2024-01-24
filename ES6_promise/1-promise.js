@@ -1,7 +1,6 @@
-// Promise fake
-function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
-    if (success) {
+    if (success === true) {
       resolve({
         status: 200,
         body: 'Success',
@@ -11,5 +10,3 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
-
-export default getFullResponseFromAPI;
